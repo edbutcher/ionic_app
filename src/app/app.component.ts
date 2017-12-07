@@ -52,7 +52,6 @@ export class MyApp {
   }
 
   openReserve() {
-
     let modal = this.modalCtrl.create(ReservationPage);
     modal.present();
   }
