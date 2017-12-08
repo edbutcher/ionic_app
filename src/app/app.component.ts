@@ -8,6 +8,7 @@ import { AboutPage } from '../pages/about/about';
 import { MenuPage } from '../pages/menu/menu';
 import { ContactPage } from '../pages/contact/contact';
 import { ReservationPage } from '../pages/reservation/reservation';
+import { CommentPage } from '../pages/comment/comment';
 import { FavoritesPage } from '../pages/favorites/favorites';
 
 
@@ -55,4 +56,5 @@ export class MyApp {
     let modal = this.modalCtrl.create(ReservationPage);
     modal.present();
   }
+
 }
