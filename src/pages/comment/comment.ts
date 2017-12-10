@@ -16,7 +16,7 @@ import {Validators, FormBuilder, FormGroup } from '@angular/forms';
 })
 export class CommentPage {
 
-  formComment: FormGroup;
+  commentForm: FormGroup;
 
   constructor(
     public navCtrl: NavController,
@@ -24,7 +24,7 @@ export class CommentPage {
     public viewCtrl: ViewController,
     private formBuilder: FormBuilder) {
 
-        this.formComment = this.formBuilder.group({
+        this.commentForm = this.formBuilder.group({
           author: ['', Validators.required],
           rating: 5,
           comment: ['', Validators.required],
@@ -40,7 +40,7 @@ export class CommentPage {
   }
 
   onSubmit() {
-    let commentData = this.formComment.value;
+    let commentData = this.commentForm.value;
     commentData.date = new Date().toISOString();
     this.viewCtrl.dismiss(commentData);
   }
