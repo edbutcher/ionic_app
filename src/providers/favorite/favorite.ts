@@ -1,8 +1,12 @@
 import {Http} from '@angular/http';
 import { Injectable } from '@angular/core';
-import { Dish } from '../../shared/dish';
+
+import { Storage } from '@ionic/storage';
 import { Observable } from 'rxjs/Observable';
+
+import { Dish } from '../../shared/dish';
 import { DishProvider } from '../dish/dish';
+
 
 /*
   Generated class for the FavoriteProvider provider.
@@ -24,6 +28,7 @@ export class FavoriteProvider {
   addFavorite(id: number): boolean {
     if (!this.isFavorite(id))
       this.favorites.push(id);
+      // add data to Data Base
     return true;
   }
 
@@ -40,6 +45,7 @@ export class FavoriteProvider {
     let index = this.favorites.indexOf(id);
     if (index >= 0) {
       this.favorites.splice(index,1);
+      // remove data from Data Base
       return this.getFavorites();
     }
     else {
