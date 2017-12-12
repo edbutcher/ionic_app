@@ -17,7 +17,7 @@
 </ion-header>
 
 <ion-content padding>
-  <form [formGroup]="formComment" (ngSubmit)="onSubmit()">
+  <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
     <ion-item>
       <ion-label color="primary" floating>Your Name</ion-label>
       <ion-input formControlName="author"></ion-input>
@@ -33,6 +33,6 @@
       <ion-label color="primary" floating>Your Comment</ion-label>
       <ion-textarea formControlName="comment" rows="5"></ion-textarea>
     </ion-item>
-    <button ion-button type="submit" [disabled]="!formComment.valid">Submit</button>
+    <button ion-button type="submit" [disabled]="!commentForm.valid">Submit</button>
   </form>
 </ion-content>

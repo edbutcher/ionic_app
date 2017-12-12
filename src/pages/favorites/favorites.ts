@@ -20,12 +20,14 @@ export class FavoritesPage implements OnInit {
   favorites: Dish[];
   errMess: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
     private favoriteservice: FavoriteProvider,
-    @Inject('BaseURL') private BaseURL,
     public toastCtrl: ToastController,
     private loadingCtrl: LoadingController,
-    private alertCtrl: AlertController) {
+    private alertCtrl: AlertController,
+    @Inject('BaseURL') private BaseURL) {
   }
 
   ngOnInit() {
